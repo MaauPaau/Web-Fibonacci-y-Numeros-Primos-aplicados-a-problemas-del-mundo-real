@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci & Primos — Seguridad Natural</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-badge">🌿 Matemáticas en el mundo real</div>
+  <h1><span class="f">Fibonacci</span> &amp; <span class="p">Primos</span><br>en la Naturaleza</h1>
+  <p class="hero-sub">
+    Explora cómo la serie de Fibonacci aparece en la naturaleza y cuáles de esos números
+    también son primos — claves en criptografía y seguridad.
+  </p>
+  <p class="hero-name">Estudiante: <span>Mauricio Alejandro Flores Tapia</span> · Programación Web I</p>
+</header>
+
+<div class="container">
+
+  <!-- CONTEXTO + ALGORITMO -->
+  <p class="section-title">Contexto del problema</p>
+  <div class="info-grid">
+    <div class="info-card fib-card">
+      <span class="info-icon">🌻</span>
+      <h3>Serie de Fibonacci</h3>
+      <p>
+        En la naturaleza, las plantas organizan sus hojas, pétalos y semillas siguiendo
+        la serie de Fibonacci (0, 1, 1, 2, 3, 5, 8…). Los girasoles tienen 34 y 55 espirales
+        de semillas — ambos números de Fibonacci. Este patrón optimiza el espacio y la captación de luz.
+      </p>
+      <div class="algo-box">
+        a = 0, b = 1<br>
+        c = a + b → nuevo término<br>
+        a = b, b = c → repetir
+      </div>
+    </div>
+    <div class="info-card pri-card">
+      <span class="info-icon">🔐</span>
+      <h3>Números Primos</h3>
+      <p>
+        Un número primo solo es divisible entre 1 y sí mismo. Son la base de la criptografía
+        moderna (RSA, HTTPS). Algunos términos de Fibonacci también son primos — llamados
+        <strong class="primo-highlight">Fibonacci primos</strong> — y son especialmente raros y valiosos.
+      </p>
+      <div class="algo-box">
+        Para cada número n:<br>
+        contador = 0<br>
+        si divisores == 2 → es primo
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMULARIO -->
+  <p class="section-title">Formulario de entrada</p>
+  <div class="form-card">
+    <h2>Generador de Fibonacci Primos</h2>
+    <p>Ingresá la cantidad de términos de Fibonacci que querés analizar. El sistema calculará la secuencia y detectará cuáles son números primos.</p>
+
+    <form id="mainForm" onsubmit="calcular(event)">
+      <div class="form-row">
+        <div>
+          <label for="terminos">Cantidad de términos (máx. 40)</label>
+          <input type="number" id="terminos" min="2" max="40" value="15" required>
+        </div>
+        <button type="submit">Calcular →</button>
+      </div>
+      <p class="error-msg" id="errorMsg">⚠ Ingresá un número entre 2 y 40.</p>
+    </form>
+  </div>
+
+  <!-- RESULTADOS -->
+  <div class="results-area" id="resultsArea">
+    <p class="section-title">Resultado</p>
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat-box s-fib">
+        <div class="sval" id="statTerminos">—</div>
+        <div class="slabel">Términos generados</div>
+      </div>
+      <div class="stat-box s-primo">
+        <div class="sval" id="statPrimos">—</div>
+        <div class="slabel">Fibonacci primos</div>
+      </div>
+      <div class="stat-box s-total">
+        <div class="sval" id="statUltimo">—</div>
+        <div class="slabel">Último término</div>
+      </div>
+    </div>
+
+    <!-- SECUENCIA COMPLETA -->
+    <div class="seq-card">
+      <h3>Secuencia completa — ★ = primo</h3>
+      <div class="seq-list" id="seqList"></div>
+    </div>
+
+    <!-- PRIMOS DESTACADOS -->
+    <div class="primos-card">
+      <h3>★ Fibonacci primos detectados</h3>
+      <div class="primos-list" id="primosList"></div>
+    </div>
+
+    <!-- CONCLUSIÓN -->
+    <div class="conclusion-card">
+      <h3>💡 Conclusión</h3>
+      <p id="conclusionText"></p>
+    </div>
+  </div>
+
+  <!-- ENLACES -->
+  <p class="section-title">Repositorio y publicación</p>
+  <div class="links-row">
+    <a href="https://github.com/tu-usuario/fibonacci-primos" target="_blank" class="link-btn">
+      📁 Repositorio GitHub
+    </a>
+    <a href="https://tu-usuario.github.io/fibonacci-primos" target="_blank" class="link-btn">
+      🌐 Ver página publicada
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>
