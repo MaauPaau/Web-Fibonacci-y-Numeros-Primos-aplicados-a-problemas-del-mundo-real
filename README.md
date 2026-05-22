@@ -1,39 +1,65 @@
 # Desafio Final 2
 
-Proyecto web que relaciona la serie de Fibonacci con los numeros primos, conectando un problema real (patrones en la naturaleza y uso de primos en seguridad) con un algoritmo simple y visual.
+Este README esta dirigido a la licenciada para explicar el problema, el codigo y como verificar el funcionamiento en GitHub Pages o localmente.
+
+## Enlaces del proyecto
+
+- Repositorio: https://github.com/MaauPaau/Web-Fibonacci-y-Numeros-Primos-aplicados-a-problemas-del-mundo-real
+- GitHub Pages: https://maaupaau.github.io/Web-Fibonacci-y-Numeros-Primos-aplicados-a-problemas-del-mundo-real/
+
 
 ## Descripcion del problema
 
-En la naturaleza aparecen patrones que siguen la serie de Fibonacci (flores, semillas, espirales). Al mismo tiempo, los numeros primos son clave en criptografia. El reto consiste en generar una cantidad de terminos de Fibonacci, identificar cuales son primos y presentar la informacion de forma clara.
+En la naturaleza aparecen patrones que siguen la serie de Fibonacci (flores, semillas, espirales). Al mismo tiempo, los numeros primos son clave en criptografia. El reto consiste en generar una cantidad de terminos de Fibonacci, identificar cuales son primos y presentar la informacion de forma clara y visual.
 
-## Objetivo
+## Objetivo del programa
 
 1. Generar la serie de Fibonacci segun la cantidad indicada por el usuario.
 2. Detectar los terminos que son numeros primos.
 3. Mostrar la secuencia, los primos encontrados y un resumen interpretativo.
 
-## Como funciona
+## Como ver el proyecto
 
-1. El usuario ingresa la cantidad de terminos (entre 2 y 40).
-2. El programa genera la serie de Fibonacci con un ciclo.
-3. Cada termino se analiza para verificar si es primo.
-4. La pagina muestra:
-	- Total de terminos generados.
-	- Cantidad de Fibonacci primos.
-	- Ultimo termino generado.
-	- Lista completa de la secuencia.
-	- Lista destacada de los primos encontrados.
+- Local: abrir index.html en el navegador.
+- Online: abrir el enlace de GitHub Pages.
 
-## Datos de entrada
+Nota: se usan fuentes de Google Fonts, por eso se recomienda tener conexion a internet.
 
-- Cantidad de terminos de Fibonacci (numero entero entre 2 y 40).
+## Tecnologias utilizadas
 
-## Resultados que muestra la pagina
+- HTML5 para la estructura.
+- CSS3 para el diseno y la adaptacion a movil y escritorio.
+- JavaScript para la logica y el manejo del DOM.
 
-- Estadisticas basicas (terminos, primos, ultimo termino).
-- Secuencia completa con marca visual de los primos.
-- Lista de Fibonacci primos detectados.
-- Conclusion en lenguaje natural sobre la rareza de estos numeros.
+## Estructura del repositorio
+
+- index.html
+- css/estilos.css
+- js/script.js
+- README.md
+
+## Explicacion del codigo (por archivo)
+
+### index.html
+
+- Contiene la estructura principal y el formulario de entrada.
+- Enlaza el estilo externo en css/estilos.css.
+- Enlaza el script externo en js/script.js con defer.
+- Define las secciones donde se muestran estadisticas, secuencia y conclusion.
+
+### css/estilos.css
+
+- Define variables de color y tipografia.
+- Usa grid y flex para organizar tarjetas y listas.
+- Aplica estilos visuales para destacar los numeros primos.
+- Incluye reglas responsive para pantallas pequenas.
+
+### js/script.js
+
+- esPrimo(n): verifica si un numero es primo contando divisores.
+- generarFibonacci(cantidad): genera la secuencia usando suma de terminos previos.
+- calcular(e): valida el input, calcula resultados y actualiza la pagina.
+- Actualiza el DOM con estadisticas, lista completa, primos y conclusion.
 
 ## Algoritmo en lenguaje sencillo
 
@@ -49,33 +75,21 @@ En la naturaleza aparecen patrones que siguen la serie de Fibonacci (flores, sem
 
 ## Diseno responsive (celular y computadora)
 
-- Se usa un layout con grid y flex para adaptar tarjetas y listas.
+- Se usa layout con grid y flex para adaptar tarjetas y listas.
 - En pantallas pequenas, el formulario pasa a una columna y el boton ocupa todo el ancho.
 
-## Estructura del repositorio
-
-- index.html
-- css/estilos.css
-- js/script.js
-- README.md
-
-## Recomendacion para estudiantes (preguntas guia)
-
-Antes de programar, responder estas preguntas. En este proyecto se cumple lo siguiente:
+## Preguntas guia respondidas
 
 1. Que problema real voy a resolver?
-	- Relacionar patrones de Fibonacci en la naturaleza con numeros primos usados en seguridad.
+   - Relacionar patrones de Fibonacci en la naturaleza con numeros primos usados en seguridad.
 2. Usare Fibonacci, numeros primos o ambos?
-	- Ambos: se genera Fibonacci y se filtran los terminos que son primos.
+   - Ambos: se genera Fibonacci y se filtran los terminos que son primos.
 3. Que datos ingresara el usuario?
-	- La cantidad de terminos a generar.
+   - La cantidad de terminos a generar.
 4. Que resultado debe mostrar la pagina?
-	- Secuencia completa, primos detectados y un resumen con estadisticas.
+   - Secuencia completa, primos detectados y un resumen con estadisticas.
 5. Como explicare el algoritmo en lenguaje sencillo?
-	- Con pasos basicos: sumar los dos ultimos para Fibonacci y contar divisores para primos.
+   - Con pasos basicos: sumar los dos ultimos para Fibonacci y contar divisores para primos.
 6. Como hare que la pagina se vea bien en celular y computadora?
-	- Usando grid/flex y reglas responsive para ajustar columnas y botones.
+   - Usando grid/flex y reglas responsive para ajustar columnas y botones.
 
-## Uso
-
-Abrir index.html en el navegador.
